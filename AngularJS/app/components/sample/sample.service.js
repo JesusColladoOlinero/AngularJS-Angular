@@ -1,4 +1,5 @@
-(function(){
+(function(angular){
+    'use strict';
     var app = angular.module('sampleService', []);
     
     app.service('sampleSrv', function($http, $q) {
@@ -19,4 +20,4 @@
                 return $q.when(deferred.promise);
         }; 
     });
-})();
+})(window.angular);
