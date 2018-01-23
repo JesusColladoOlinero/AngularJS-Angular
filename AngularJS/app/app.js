@@ -13,7 +13,7 @@
         .state({
             name: 'users',
             url: '/users',
-            template: '<users></users>'
+            template: '<filter-search name="user"></filter-search><users name="user"></users>'
         })
         .state({
             name: 'contact',
