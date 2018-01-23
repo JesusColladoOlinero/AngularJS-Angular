@@ -1,6 +1,6 @@
 (function(angular){
     'use strict';
-    angular.module('contact', [])  
+    angular.module('appge')  
     .component("contact", {        
         templateUrl: "app/components/contact/contact.view.html"        
     });

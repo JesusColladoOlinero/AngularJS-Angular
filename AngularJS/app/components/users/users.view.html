@@ -1,1 +1,8 @@
 <h2>Listado de usuarios {{$ctrl.name}}</h2>
+
+<div ng-controller="usersControl as vm">
+    <div ng-repeat="user in vm.users | filter:$ctrl.name:user" style="margin-bottom:20px">
+        Avatar: <img src="{{user.avatar}}" /> <br />
+        Nombre: {{user.first_name + ' ' + user.last_name}}
+    </div>
+</div>

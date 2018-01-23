@@ -1,7 +1,7 @@
 (function(angular){
     'use strict';
 
-    angular.module('filterSearch', [])  
+    angular.module('appge')  
     .component("filterSearch", {  
         templateUrl: "app/components/filterSearch/filterSearch.view.html",
         bindings: {

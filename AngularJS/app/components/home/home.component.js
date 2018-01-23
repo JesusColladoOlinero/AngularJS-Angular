@@ -1,6 +1,6 @@
 (function(angular){
     'use strict';
-    angular.module('home', [])  
+    angular.module('appge')  
     .component("home", {        
         templateUrl: "app/components/home/home.view.html"        
     });

@@ -1,6 +1,6 @@
 (function(angular){
     'use strict';
-    var app = angular.module('appge', ['ui.router', 'ngResource', 'layout'])   
+    var app = angular.module('appge', ['ui.router', 'ngResource'])   
     .config(function($stateProvider, $urlRouterProvider, $resourceProvider) {
        
         $resourceProvider.defaults.stripTrailingSlashes = false;
@@ -23,22 +23,22 @@
        
         $urlRouterProvider.otherwise('/home'); //red become the default view
       
-    })
-    .controller("appgeCtrl", function(){
-        
-        var vm = this;       
-    
-        /*  
-        sampleSrv.getUsers()
-        .then(function(data) {
-                console.log('Success: ' + data.data);
-                vm.users = data.data;
-                //console.log(vm);                        
-            }, 
-            function(reason) {
-                console.log('Failed: ' + reason);            
-        });   
-        */      
     });
+    // .controller("appgeCtrl", function(){
+        
+    //     var vm = this;       
+    
+    //     /*  
+    //     sampleSrv.getUsers()
+    //     .then(function(data) {
+    //             console.log('Success: ' + data.data);
+    //             vm.users = data.data;
+    //             //console.log(vm);                        
+    //         }, 
+    //         function(reason) {
+    //             console.log('Failed: ' + reason);            
+    //     });   
+    //     */      
+    // });
 
 })(window.angular);
