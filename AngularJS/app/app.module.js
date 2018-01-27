@@ -1,5 +1,5 @@
 (function(angular){
     'use strict';
-    var app = angular.module('appge', ['ui.router', 'app.layout', 'app.users', 'app.home', 'app.filterSearch', 'app.contact']);    
+    var app = angular.module('appge', ['ui.router', 'app.layout', 'app.users', 'app.home', 'app.filterSearch', 'app.contact', 'app.post']);    
 
 })(window.angular);
