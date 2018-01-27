@@ -1,0 +1,9 @@
+<h2>Listado de usuarios</h2>
+
+<div>
+    <div ng-repeat="user in $ctrl.users | filter:$ctrl.name:user" style="margin-bottom:20px">
+        Avatar: <img src="{{user.avatar}}" /> <br />
+        Nombre: {{user.first_name + ' ' + user.last_name}}
+        <button type="button" ng-click="$ctrl.viewUserDetails(user.id)">Detalles</button>
+    </div>
+</div>
