@@ -1,6 +1,6 @@
 (function(angular){
     'use strict';
-    angular.module('appge')  
+    angular.module('app.menu')  
     .component("menu", {        
         templateUrl: "app/components/menu/menu.view.html"
     });
