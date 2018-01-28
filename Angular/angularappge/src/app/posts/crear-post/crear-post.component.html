@@ -1,0 +1,30 @@
+<style type="text/css">
+  label{
+      padding: 5px;
+  }
+
+  input{
+      padding: 5px;
+      margin: 12px 5px 0 5px;
+  }
+
+  button{
+      padding: 5px;
+      margin: 12px 5px 0 5px;
+  }
+
+  form{
+      margin-left: 25px;
+      margin-top: 25px;
+  }
+</style>
+
+<form [formGroup]="postForm" (submit)="onSubmit()">
+  <label>Name: </label>
+  <input formControlName="name">
+  <br>
+  <label>Job: </label>
+  <input formControlName="job">
+  <br>
+  <button type="submit" [disabled]="!postForm.valid">Crear</button>
+</form>

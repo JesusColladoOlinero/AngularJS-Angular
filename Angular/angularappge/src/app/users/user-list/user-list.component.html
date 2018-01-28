@@ -1,0 +1,5 @@
+<hr>
+<div *ngFor="let user of users">
+  <app-user [user]="user"></app-user>
+  <button (click)="onClick(user.id)">Detalles</button>
+</div>

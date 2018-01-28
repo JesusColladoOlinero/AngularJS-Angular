@@ -1,3 +1,12 @@
-<p>
-  user works!
-</p>
+<!-- <div *ngIf="user">
+  Name: {{user.name}}
+  <br> UserName {{user.username}}
+  <br> Email: {{user.email}}
+  <br> Address: {{user.address.street}}
+</div> -->
+
+<div *ngIf="user">
+  Id: {{user.id}}
+  <br> Name: {{user.first_name + ' ' + user.last_name}}
+  <br> Avatar: <img src="{{user.avatar}}" />
+</div>
