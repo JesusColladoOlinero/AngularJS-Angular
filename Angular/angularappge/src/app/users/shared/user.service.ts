@@ -8,7 +8,7 @@ import { User } from './user.model';
 @Injectable()
 export class UserService {
   // private userUrl = 'https://jsonplaceholder.typicode.com/users';
-  private userUrl = 'https://reqres.in/api/users?page=2';
+  private userUrl = 'https://reqres.in/api/users';
 
   constructor(private http: HttpClient) {  }
 
@@ -20,8 +20,8 @@ export class UserService {
     return this.http.get<Data>(this.userUrl);
   }
 
-  getUser(id: number): Observable<User> {
-    return this.http.get<User>(`${this.userUrl}/${id}`);
+  getUser(id: number): Observable<any> {
+    return this.http.get(`${this.userUrl}/${id}`);
 
     // `` es para concatenar en TypeScript
   }

@@ -11,7 +11,6 @@ import { filterQueryId } from '@angular/core/src/view/util';
 })
 export class CrearPostComponent implements OnInit {
   postForm: FormGroup;
-  idUsers = [];
 
   constructor(
     private fb: FormBuilder,
@@ -28,11 +27,12 @@ export class CrearPostComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.postForm.valid){
+    if (this.postForm.valid) {
       this.postService.postPost(this.postForm.value)
         .subscribe(post => {
           console.log(post);
-          this.router.navigateByUrl(`posts/${post.id}`);
+
+          this.router.navigate([`posts/${post.id}`], { queryParams: post });
         });
     }
   }

@@ -24,6 +24,9 @@ export class DetailUserComponent implements OnInit {
     const id = +this.router.snapshot.paramMap.get('id');
 
     this.userService.getUser(id)
-      .subscribe(usr => this.user = usr, err => console.error(err));
+      .subscribe((usr) => {
+        this.user = usr.data;
+        console.log(this.user);
+      }, err => console.error(err));
   }
 }

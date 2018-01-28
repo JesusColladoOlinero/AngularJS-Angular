@@ -1,3 +1,7 @@
-<p>
-  post works!
-</p>
+<hr>
+<div *ngIf="post">
+    Id: {{post.id}}
+    <br> Name: {{post.name}}
+    <br> Job: {{post.job}}
+    <br> Create At: {{post.createdAt}}
+</div>
