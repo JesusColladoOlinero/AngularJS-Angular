@@ -1,5 +1,7 @@
 <hr>
-<div *ngFor="let user of users">
+<input type="text" [(ngModel)]="term" placeholder="Search By Name" />
+<hr>
+<div *ngFor="let user of users | search:'id,fist_name,last_name':term">
   <app-user [user]="user"></app-user>
   <button (click)="onClick(user.id)">Detalles</button>
 </div>
