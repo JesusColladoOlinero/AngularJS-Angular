@@ -11,6 +11,7 @@ import { SearchPipe } from '../../search.pipe';
 })
 export class UserListComponent implements OnInit {
   users: User[];
+  term: string;
 
   constructor(
     private userService: UserService,
