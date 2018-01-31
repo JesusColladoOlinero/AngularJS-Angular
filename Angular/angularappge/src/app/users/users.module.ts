@@ -6,7 +6,6 @@ import { UserComponent } from './user/user.component';
 import { UserService } from './shared/user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { DetailUserComponent } from './detail-user/detail-user.component';
-import { SearchPipe } from '../search.pipe';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -23,8 +22,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     UserComponent,
     UserListComponent,
-    DetailUserComponent,
-    SearchPipe
+    DetailUserComponent
   ],
   providers: [UserService]
 })
