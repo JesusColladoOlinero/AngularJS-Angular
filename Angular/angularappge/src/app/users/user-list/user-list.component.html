@@ -1,7 +1,8 @@
 <hr>
-<input type="text" [(ngModel)]="term" placeholder="Search By Name" />
+<input type="text" #boxI (keyup.enter)="SearchUsers('id,first_name,last_name', boxI.value)" placeholder="Search By Name & Id" title="Press Enter to Search"> <label>(Press Enter to Search)</label>
 <hr>
-<div *ngFor="let user of users | search:'id,fist_name,last_name':term">
+<div *ngFor="let user of users">
   <app-user [user]="user"></app-user>
   <button (click)="onClick(user.id)">Detalles</button>
 </div>
+<div *ngIf="users?.length === 0">Sin Resultados....</div>
