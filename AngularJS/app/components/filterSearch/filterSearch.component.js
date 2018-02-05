@@ -5,7 +5,8 @@
     .component("filterSearch", {  
         templateUrl: "app/components/filterSearch/filterSearch.view.html",
         bindings: {
-            name: '='
+            filter: '<',
+            onFilter: '&'
           }
     });
 })(window.angular);
