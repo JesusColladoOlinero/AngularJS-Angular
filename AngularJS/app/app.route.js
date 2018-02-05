@@ -11,7 +11,7 @@
         .state({
             name: 'users',
             url: '/users',
-            template: '<filter-search name="user"></filter-search><users name="user"></users>'
+            template: '<users-list></users-list>'
         })
         .state({
             name: 'user',

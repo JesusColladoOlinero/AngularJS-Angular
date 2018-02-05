@@ -5,7 +5,7 @@
         templateUrl: "app/components/users/users.view.html",   
         controller: UserController,              
         bindings: {
-            name: '<'
+            filter: '<'
         }      
     });
 
@@ -17,7 +17,6 @@
     function UserController($location, userFactory){
         var vm = this;
 
-        vm.onChange = onChange;
         vm.viewUserDetails = viewUserDetails;
         vm.$onInit = onInit;
 
@@ -31,10 +30,6 @@
                 function(reason) {
                     console.log('Failed: ' + reason);            
             });       
-        }
-    
-        function onChange(name){
-            vm.name = name;
         }
         
         function viewUserDetails(userId){
